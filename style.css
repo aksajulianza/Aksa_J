@@ -1,0 +1,440 @@
+/* ============================================
+   TOKENS — netral hangat + satu aksen (hijau pinus)
+   ============================================ */
+:root {
+  --paper: #F7F6F2;
+  --ink: #1B1A17;
+  --text: #35332D;
+  --muted: #8C8677;
+  --line: #E4E0D5;
+  --accent: #3E5641;
+  --radius: 2px;
+  --serif: "Newsreader", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[data-theme="dark"] {
+  --paper: #15171B;
+  --ink: #F3F1E8;
+  --text: #C9C5B8;
+  --muted: #837F72;
+  --line: #2A2D32;
+  --accent: #82B18D;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font-family: var(--sans);
+  line-height: 1.65;
+  transition: background 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  color: var(--ink);
+  margin: 0 0 0.4em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+  font-style: italic;
+  font-weight: 500;
+}
+
+h3 { font-size: 1.05rem; font-weight: 500; }
+
+p { margin: 0 0 1em; }
+.section-lead { color: var(--muted); max-width: 44ch; margin-bottom: 3rem; }
+
+code {
+  font-family: var(--sans);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.1em 0.4em;
+  border-radius: 2px;
+  font-size: 0.85em;
+  color: var(--text);
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+
+/* ============================================
+   NAV
+   ============================================ */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 6vw;
+}
+
+.nav-mark {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.nav-links a:hover { border-color: var(--accent); color: var(--ink); }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0.3rem;
+}
+.theme-toggle:hover { color: var(--accent); }
+.theme-toggle:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+}
+
+/* ============================================
+   HERO — satu momen animasi, sisanya diam
+   ============================================ */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  gap: 3.5rem;
+  padding: 6vw 6vw 9vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text { flex: 1 1 480px; max-width: 620px; }
+
+.hero-intro {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(3rem, 8vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.3em;
+}
+
+.hero-role {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: var(--ink);
+  max-width: 34ch;
+}
+
+.hero-desc {
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 1.2rem 0 2.2rem;
+}
+
+.hero-actions { display: flex; align-items: center; gap: 1.8rem; flex-wrap: wrap; }
+
+.btn-primary {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.85rem 1.7rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  font-family: var(--sans);
+  transition: background 0.2s ease;
+}
+.btn-primary:hover { background: var(--accent); }
+
+.text-link {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 3px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.text-link:hover { border-color: var(--accent); color: var(--accent); }
+
+.hero-photo { flex: 0 0 300px; max-width: 300px; }
+
+.photo-frame {
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.photo-placeholder-text {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 1rem;
+  line-height: 1.5;
+}
+.photo-frame.photo-empty .photo-placeholder-text { display: block; }
+.photo-frame--square { aspect-ratio: 1 / 1; }
+
+/* fade-up singkat, satu kali saat halaman dimuat — nama & intro tampil langsung */
+.hero-role, .hero-desc, .hero-actions, .hero-photo {
+  animation: fadeUp 0.5s ease both;
+}
+.hero-photo   { animation-delay: 0.02s; }
+.hero-role    { animation-delay: 0.06s; }
+.hero-desc    { animation-delay: 0.12s; }
+.hero-actions { animation-delay: 0.18s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about {
+  display: flex;
+  gap: 4.5rem;
+  padding: 6rem 6vw;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.about-photo { flex: 0 0 220px; max-width: 220px; }
+.about-text { flex: 1 1 420px; }
+
+.about-facts {
+  margin: 2.2rem 0 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+.about-facts div {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.7rem 0;
+  font-size: 0.92rem;
+}
+.about-facts dt { color: var(--muted); min-width: 100px; margin: 0; font-weight: 400; }
+.about-facts dd { margin: 0; color: var(--text); }
+
+/* ============================================
+   TIMELINE / ACHIEVEMENTS — daftar bergaris tipis
+   ============================================ */
+.timeline-section, .achievements {
+  padding: 6rem 6vw;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-row, .achv-row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 2rem;
+  padding: 1.8rem 0;
+  border-top: 1px solid var(--line);
+}
+.timeline-row:last-child, .achv-row:last-child { border-bottom: 1px solid var(--line); }
+
+.row-year {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1rem;
+  padding-top: 0.1em;
+}
+
+.row-body h3 { margin-bottom: 0.35rem; }
+.row-body p { color: var(--muted); margin: 0; max-width: 55ch; }
+
+.achievements { max-width: 1100px; }
+.achv-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+.achv-row { grid-template-columns: 70px 1fr; }
+
+@media (max-width: 700px) {
+  .achv-list { grid-template-columns: 1fr; }
+}
+
+/* ============================================
+   GALLERY
+   ============================================ */
+.gallery {
+  padding: 6rem 6vw;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+
+.gallery-item.photo-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.gallery-item.photo-empty img { display: none; }
+
+/* ============================================
+   CONTACT — satu momen kontras gelap
+   ============================================ */
+.contact {
+  background: var(--ink);
+  padding: 6rem 6vw;
+}
+
+[data-theme="dark"] .contact { background: #0E1013; }
+
+.contact h2, .contact .section-lead { color: var(--paper); }
+.contact .section-lead { color: #B9B4A3; }
+
+.contact-inner { max-width: 520px; margin: 0 auto; }
+
+.form-row { margin-bottom: 1.4rem; }
+.form-row label {
+  display: block;
+  color: #B9B4A3;
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.form-row input, .form-row textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #40433F;
+  color: var(--paper);
+  padding: 0.6rem 0.1rem;
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  resize: vertical;
+}
+.form-row input::placeholder, .form-row textarea::placeholder { color: #666961; }
+.form-row input:focus, .form-row textarea:focus {
+  outline: none;
+  border-bottom-color: var(--accent);
+}
+
+.contact .btn-primary { background: var(--paper); color: var(--ink); }
+.contact .btn-primary:hover { background: var(--accent); color: var(--paper); }
+
+.form-note { margin-top: 1.1rem; color: #9FB8A5; font-size: 0.88rem; }
+
+.social-links {
+  display: flex;
+  gap: 1.8rem;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #33362F;
+  flex-wrap: wrap;
+}
+.social-links a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: #B9B4A3;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.social-links a:hover { color: var(--paper); border-color: var(--accent); }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  text-align: center;
+  padding: 2.2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-role, .hero-desc, .hero-actions, .hero-photo {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .gallery-item img { transition: none; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 640px) {
+  .timeline-row, .achv-row { grid-template-columns: 1fr; gap: 0.4rem; }
+  .row-year { font-size: 0.95rem; }
+}

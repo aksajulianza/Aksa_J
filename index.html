@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muh. Aqzah Julianzah — Portofolio Pribadi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#atas" class="nav-mark">Muh. Aqzah Julianzah</a>
+  <ul class="nav-links">
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#riwayat">Riwayat</a></li>
+    <li><a href="#pencapaian">Pencapaian</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Ganti mode gelap/terang">☾</button>
+</nav>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="atas">
+  <div class="hero-text">
+    <p class="hero-intro">Halo, saya Aksa</p>
+    <h1>Muh. Aqzah Julianzah</h1>
+    <p class="hero-role">Mahasiswa Akuntansi, Yang Banyak Aksi.</p>
+    <p class="hero-desc">
+      Saya adalah manusia biasa, makan nasi.
+      Halaman ini adalah catatan perjalanan saya sejauh ini, dan yang sedang saya kerjakan ke depan.
+    </p>
+    <div class="hero-actions">
+      <a href="#kontak" class="btn-primary">Hubungi saya</a>
+      <a href="#pencapaian" class="text-link">Lihat pencapaian</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <img src="img/profil.jpg" alt="Foto profil" onerror="this.style.display='none'; this.parentElement.classList.add('photo-empty')">
+      <span class="photo-placeholder-text">Ganti dengan foto Anda<br><code>img/profil.jpg</code></span>
+    </div>
+  </div>
+</header>
+
+<!-- ========== TENTANG ========== -->
+<section class="about" id="tentang">
+  <div class="about-photo">
+    <div class="photo-frame photo-frame--square">
+      <img src="img/tentang.jpg" alt="Foto pendukung" onerror="this.style.display='none'; this.parentElement.classList.add('photo-empty')">
+      <span class="photo-placeholder-text">img/tentang.jpg</span>
+    </div>
+  </div>
+  <div class="about-text">
+    <h2>Tentang saya</h2>
+    <p>
+      Saya orang yang suka bermain dan hal hal yang menyenangkan lainnya.
+    </p>
+    <p>
+      Di luar layar, saya suka <em>Badminton, Main Game dan lain lain</em>.
+      Saya percaya pencapaian terbesar bukan cuma soal piala, tapi soal konsistensi kecil
+      yang dikumpulkan dari waktu ke waktu.
+    </p>
+    <dl class="about-facts">
+      <div><dt>Domisili</dt><dd>Sulawesi Tengah, Kab. Donggala, Kec. Balaesang, Indonesia</dd></div>
+      <div><dt>Fokus</dt><dd>Pengembangan web &amp; organisasi</dd></div>
+      <div><dt>Status</dt><dd>Mahasiswa aktif</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ========== RIWAYAT HIDUP ========== -->
+<section class="timeline-section" id="riwayat">
+  <h2>Riwayat hidup</h2>
+  <p class="section-lead">Perjalanan pendidikan, organisasi, dan pengalaman kerja saya sampai hari ini.</p>
+
+  <div class="timeline">
+    <div class="timeline-row">
+      <span class="row-year">2026</span>
+      <div class="row-body">
+        <h3>Lulus SMA</h3>
+        <p>Menyelesaikan pendidikan menengah atas dengan fokus pada bidang MIPA, aktif di ekstrakurikuler Badminton.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <span class="row-year">2026</span>
+      <div class="row-body">
+        <h3>Mulai kuliah — S1 Akuntansi</h3>
+        <p>Diterima di program studi S1 Akuntansi, mulai Belajar Apapun yang saya ingin tahu.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <span class="row-year">2026</span>
+      <div class="row-body">
+        <h3> Anggota, Himpunan Mahasiswa dan MPM Al-Iqra</h3>
+        <p>Masih Menjadi Anggota.</p>
+      </div>
+    </div>
+    </div>
+    <div class="timeline-row">
+      <span class="row-year">2026</span>
+      <div class="row-body">
+        <h3>Sekarang</h3>
+        <p>Terus belajar, membangun proyek pribadi, dan mempersiapkan diri untuk tantangan berikutnya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PENCAPAIAN ========== -->
+<section class="achievements" id="pencapaian">
+  <h2>Pencapaian &amp; prestasi</h2>
+  <p class="section-lead">Belum ada pencapaian yang patut dibanggakan.</p>
+
+  
+<!-- ========== GALERI ========== -->
+<section class="gallery" id="galeri">
+  <h2>Galeri</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="img/galeri1.jpg" alt="Galeri 1" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri2.jpg" alt="Galeri 2" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri3.jpg" alt="Galeri 3" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri4.jpg" alt="Galeri 4" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri5.jpg" alt="Galeri 5" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri6.jpg" alt="Galeri 5" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri7.jpg" alt="Galeri 5" onerror="this.parentElement.classList.add('photo-empty')"></div>
+    <div class="gallery-item"><img src="img/galeri8.jpg" alt="Galeri 5" onerror="this.parentElement.classList.add('photo-empty')"></div>
+  </div>
+</section>
+
+<!-- ========== KONTAK ========== -->
+<section class="contact" id="kontak">
+  <div class="contact-inner">
+    <h2>Mari terhubung</h2>
+    <p class="section-lead">Punya proyek, tawaran kerja sama, atau sekadar ingin menyapa? Kirim pesan di bawah ini.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required placeholder="Nama Anda"> 
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="nama@gmail.com">
+      </div>
+      <div class="form-row">
+        <label for="pesan">Pesan</label>
+        <textarea id="pesan" name="pesan" rows="4" required placeholder="Tulis pesan Anda..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Kirim pesan</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+
+    <div class="social-links">
+      <a href="mailto:muhaqzahjulianza@gmail.com">Email</a>
+      <a href="https://www.instagram.com/kentut_berdahak012?stkn=ZThpY2E4d3Iza2Zu" target="_blank" rel="noopener">Instagram</a>
+      <a href="-" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="-" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Nama Anda</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
